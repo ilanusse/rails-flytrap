@@ -1,6 +1,6 @@
 # Rails Flytrap
 
-Flytrap is an exception handler for Rails JSON APIs with the intended purpose of making error handling being very simple to handle.
+Flytrap is an exception handler for Rails JSON APIs with the intention of making error handling very simple.
 
 ## Installation
 
@@ -53,17 +53,12 @@ Then if `dummy?` returns `true`, the output you get is:
 {
   "error": {
     "message": "Oops! Something broke!",
-    "code": 1
+    "code": 1,
+    "class_name": "DummyException"
   }
 }
 ```
 with, of course, your 500 status code!
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
